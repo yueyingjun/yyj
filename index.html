@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" rem="750">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/u-reset.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+        /*
+        1. 创建一个文件夹
+        2. css文件夹  放入css文件
+           放入 swiper.css -> 已经帮我们写好了基础的样式
+           放入 animate.min.css  -> 帮我们写好了动画的方式
+           放入 u-reset.css  做响应式
+
+        3. js文件夹   放入js
+            1.  放入 swiper.js ->帮我们写好的基础的交互逻辑
+            2.  swiper.animate.min.js->写好的基础的动画逻辑
+        4. images 文件夹   放入图片
+            放入的是每一屏用到的图片，都是由设计师设计的，
+            切片的方式切出来
+        5. 创建html页面
+
+            1. 将css文件夹里面的内容全部都引入进来
+            2. 将js文件夹里面的内容全部都引入进来
+            3. 创建相应的html内容
+            4. 需要启动 swiper
+            5. 需要设置一下 每一屏的大小
+            6. 需要设置一下相应  html rem="750"
+            7. 需要设置动画
+                1. 要在动画的元素 class="ani"
+                2. swiper-animate-effect="rotateOut" 代表动画的方式?
+                3. 动画时间swiper-animate-duration="0.5s"
+                4. 动画等待时间swiper-animate-delay="0.3s"
+
+        */
+        body{
+            padding:0;margin:0;
+        }
+        .swiper-container {
+            width: 100vw;
+            height: 100vh;
+        }
+        .one{
+            background: url("images/slide1/bg.png") no-repeat 0 0 / 100% 100%;
+        }
+        .zhuangshi{
+            width:1.66rem;height:1.2rem;
+            position: absolute;
+            left:0.6rem;top:0.7rem;
+        }
+        .fav{
+            width:1.53rem;height:1.5rem;
+            position: absolute;
+            right:0.6rem;top:0.7rem;
+        }
+        .block{
+            width:5.57rem;height:5.7rem;
+            position: absolute;
+            left:0;top:0;right:0;bottom: 0;
+            margin: auto;
+        }
+        .shoes{
+            width:6.94rem;height:5.73rem;
+            position: absolute;
+            left:0;top:0;right:0;bottom: 0;
+            margin: auto;
+        }
+        .title{
+            width:2.81rem;height:1.55rem;
+            position: absolute;
+            left:0.6rem;top:9.2rem;
+        }
+        .gongyi{
+            width:1.32rem;height:0.65rem;
+            position: absolute;
+            left:0.6rem;bottom:1.24rem;
+        }
+        .price{
+            width:1.88rem;height:0.71rem;
+            position: absolute;
+            right:0.6rem;bottom:1.2rem;
+        }
+        .two{
+            background: url("images/slide2/bg.png") no-repeat 0 0 / 100% 100%;
+        }
+        .two .shoes1{
+            width:5.19rem;height:4.85rem;
+            position: absolute;
+            top:3.2rem;left:0;right:0;margin:auto;
+
+        }
+        .bottom{
+            width:6.9rem;height:5.05rem;
+            position: absolute;
+            bottom:0;left:0;right:0;margin:auto;
+        }
+    </style>
+</head>
+<body>
+
+//  1. 下载 git.exe
+//2.  安装  next  finish
+
+//  程序->git-> git bash
+
+//  git config --global user.name xxxxx
+//  git config --global user.email sssss@qq.com
+
+// 登陆你的github
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide one">
+            <img src="images/zhuangshi.png" alt="" class="zhuangshi ani" swiper-animate-effect="rubberBand">
+
+            <img src="images/slide1/fav.png" alt="" class="fav ani" swiper-animate-effect="flash" >
+
+            <img src="images/slide1/block.png" alt="" class="ani block" swiper-animate-effect="rotateIn" swiper-animate-delay="0.3s">
+
+            <img src="images/slide1/shoes.png" alt="" class="ani shoes" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="0.5s">
+            <img src="images/slide1/title.png" alt="" class="ani title" swiper-animate-effect="slideInLeft" swiper-animate-delay="0.8s">
+
+            <img src="images/slide1/gongyi.png" alt="" class="ani gongyi" swiper-animate-effect="flipInX" swiper-animate-delay="0.8s">
+
+            <img src="images/slide1/price.png" alt="" class="ani price" swiper-animate-effect="flipInX" swiper-animate-delay="0.8s">
+
+
+        </div>
+        <div class="swiper-slide two">
+            <img src="images/zhuangshi2.png" alt="" class="zhuangshi ani" swiper-animate-effect="rubberBand">
+            <img src="images/slide2/shoes.png" alt="" class="shoes1 ani" swiper-animate-effect="rubberBand">
+            <img src="images/slide2/bottom.png" alt="" class="bottom ani" swiper-animate-effect="rubberBand">
+
+        </div>
+        <div class="swiper-slide">
+
+        </div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+    </div>
+
+</div>
+
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate1.0.3.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'vertical', // 垂直切换选项
+        loop: true ,// 循环模式选项
+        on:{
+            init: function(){
+                swiperAnimateCache(this); //隐藏动画元素
+                swiperAnimate(this); //初始化完成开始动画
+            },
+            slideChangeTransitionEnd: function(){
+                swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
